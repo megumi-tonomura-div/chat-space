@@ -16,42 +16,42 @@ Things you may want to cover:
 usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false, foreign_key: true,add_index :users, :user_name|
-|email|string|null: false, foreign_key: true|
-|password|string|null: false, foreign_key: true|
+|user_name|string|null: false, index : true|
+|email|string|null: false|
+|password|string|null: false|
 ### Association
 - belongs_to :groups, through: :group_users
-- has_many :groups_users
+- has_many :groups_users, foreign_key: true
 
 groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|bigint|null: false, foreign_key: true|
-|group_id|bigint|null: false, foreign_key: true|
+|user_id|bigint|null: false|
+|group_id|bigint|null: false|
 ### Association
-- has_many :user
-- has_many :group 
+- has_many :user, foreign_key: true
+- has_many :group, foreign_key: true
 
 
 groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, foreign_key: true,add_index :group_name|
+|group_name|string|null: false,add_index :group_name|
 ### Association
-- has_many :users, through: :group_users
-- has_many :group_users
+- has_many :users, through: :group_users, foreign_key: true
+- has_many :group_users, foreign_key: true
 - accepts_nested_attributes_for :group_users
 
 messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|MEDIUMTEXT|null: false, foreign_key: true|
-|image|MEDIUMBLOB|null: false, foreign_key: true|
-|user_id|bigint|null: false, foreign_key: true|
-|group_id|bigint|null: false, foreign_key: true|
+|text|MEDIUMTEXT|null: false|
+|image|MEDIUMBLOB|null: false|
+|user_id|bigint|null: false|
+|group_id|bigint|null: false|
 ### Association
-- has_many :group
-- has_many :user
+- has_many :group, foreign_key: true
+- has_many :user, foreign_key: true
 
 
 
