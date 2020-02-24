@@ -17,7 +17,8 @@ usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_name|string|null: false, foreign_key: true|
-|email|string|null: false, foreign_key: true|
+|email|string|null: false, foreign_key: true|add_column :users, :email, :string
+    add_index :users, :email, unique: true
 |password|string|null: false, foreign_key: true|
 ### Association
 - belongs_to :groups, through: :group_users
@@ -36,7 +37,7 @@ groups_usersテーブル
 groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, foreign_key: true|
+|group_name|string|null: false, foreign_key: trueadd_index :group_name|
 ### Association
 - has_many :users, through: :group_users
 - has_many :group_users
