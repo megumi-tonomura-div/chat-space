@@ -16,12 +16,13 @@ Things you may want to cover:
 usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false, index : true|
-|email|string|null: false|
+|user_name|string|null: false, index : true, unique: true|
+|email|string|null: false, unique: true|
 |password|string|null: false|
 ### Association
 - belongs_to :groups, through: :group_users
 - has_many :groups_users, foreign_key: true
+- has_many :messages
 
 groups_usersテーブル
 |Column|Type|Options|
@@ -41,6 +42,7 @@ groupsテーブル
 - has_many :users, through: :group_users, foreign_key: true
 - has_many :group_users, foreign_key: true
 - accepts_nested_attributes_for :group_users
+- has_many :messages
 
 messagesテーブル
 |Column|Type|Options|
