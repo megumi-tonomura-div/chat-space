@@ -30,8 +30,8 @@ groups_usersテーブル
 |user_id|bigint|null: false|
 |group_id|bigint|null: false|
 ### Association
-- has_many :user, foreign_key: true
-- has_many :group, foreign_key: true
+- belongs_to :user, foreign_key: true
+- belongs_to :group, foreign_key: true
 
 
 groupsテーブル
@@ -41,20 +41,19 @@ groupsテーブル
 ### Association
 - has_many :users, through: :group_users, foreign_key: true
 - has_many :group_users, foreign_key: true
-- accepts_nested_attributes_for :group_users
+- accepts_nested_attributes_for :user_groups
 - has_many :messages
 
 messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|MEDIUMTEXT|null: false|
-|image|MEDIUMBLOB|null: false|
+|text|MEDIUMTEXT|
+|image|MEDIUMBLOB|
 |user_id|bigint|null: false|
 |group_id|bigint|null: false|
 ### Association
-- has_many :group, foreign_key: true
-- has_many :user, foreign_key: true
-
+- belongs_to :group, foreign_key: true
+- belongs_to :user, foreign_key: true
 
 
 * Database initialization
