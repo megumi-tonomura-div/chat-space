@@ -3,7 +3,7 @@
 # usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false, index : true|
+|user_name|string|null: false, index: true|
 |email|string|null: false, unique: true|
 
 ### Association
@@ -14,8 +14,8 @@
 # groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|bigint|null: false, foreign_key: true|
-|group_id|bigint|null: false, foreign_key: true|
+|user_id|bigint|foreign_key: true|
+|group_id|bigint|foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
@@ -35,13 +35,12 @@
 |------|----|-------|
 |text|text|
 |image|text|
-|user_id|bigint|null: false, foreign_key: true|
-|group_id|bigint|null: false, foreign_key: true|
+|user_id|bigint|foreign_key: true|
+|group_id|bigint|foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
 
-* ...
 
 —————————————————————————————————————————
 
