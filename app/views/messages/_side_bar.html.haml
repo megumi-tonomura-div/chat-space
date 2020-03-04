@@ -1,0 +1,17 @@
+.chat-side
+  .side-header
+    .side-header__box
+      .side-header__box__user-name
+        megu
+      .side-header__box__menu
+        .side-header__box__menu__new-group
+        = link_to'#',class: "side-bar__user-name__content__logo__edit" do
+          = icon('fas', 'edit')
+        .side-header__box__menu__edit-user
+        = link_to "/users/#/edit", class: "side-bar__user-name__content__logo__setting" do
+          = icon('fas', 'cog')
+  .group
+    .group__group__name
+      aaaa
+    .group__latest-message
+      最初の投稿
