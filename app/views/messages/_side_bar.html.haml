@@ -3,16 +3,20 @@
     .chat-side__header__box
       .chat-side__header__box__user-name
         megu
-      .chat-side-header__box__menu
-        .chat-side-header__box__menu__new-group
+      .chat-side__header__box__menu
+        .chat-side__header__box__menu__new-group
         = link_to'#',class: "side-bar__user-name__content__logo__edit" do
-          = icon('fas', 'edit')
-        .side-header__box__menu__edit-user
+          = icon('far', 'edit')
+          %span<>
+        .chat-side__header__box__menu__edit-user
         = link_to "/users/#/edit", class: "side-bar__user-name__content__logo__setting" do
           = icon('fas', 'cog')
+          %span<>
   .group
     
     .group__name
-      saisyo
+      %p aaa
     .group__latest-message
-      hello
+      最初のメッセージ
+
+

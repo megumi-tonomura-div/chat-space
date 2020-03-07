@@ -1,4 +1,28 @@
 .main_chat
   .main_chat__header
-  .main_chat__message
-  .main_chat__footer
+    .main_chat__header__left
+      .main_chat__header__left__current-group
+        %h2 aaa
+      .main_chat__header__left__member
+      .main_chat__header__left__member__M
+        %ul Member :  megu
+    .main_chat__header__right
+      .main_chat__header__right__edit-btn
+        = link_to "#", class: "main_chat__edit-btn" do
+          Edit
+
+  .main_chat__messages
+    
+  .main_chat__form 
+    .main_chat__form__input-box
+      .main_chat__form__input-box__text
+        %input.input-text{:placeholder => "type a message", :value => ""}/
+
+      .main_chat__form__input-box__picture 
+        = link_to "#", class: "main_chat__form__new-massage__picture" do
+          =icon('far', 'image')
+          
+    
+      = link_to "#", class: "main_chat__form__send" do
+        Send
+         
