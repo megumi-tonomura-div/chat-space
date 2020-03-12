@@ -12,17 +12,21 @@
           Edit
 
   .main_chat__messages
-    
-  .main_chat__form 
-    .main_chat__form__input-box
-      .main_chat__form__input-box__text
-        %input.input-text{:placeholder => "type a message", :value => ""}/
+    .main_chat__messages__first
+      .main_chat__messages__first__name
+        megu
+      
+      .main_chat__messages__first__text
+        2020/03/12(Tue)17:27:46
 
-      .main_chat__form__input-box__picture 
-        = link_to "#", class: "main_chat__form__new-massage__picture" do
-          =icon('far', 'image')
-          
+    .main_chat__messages__data
+      こんにちは！
     
-      = link_to "#", class: "main_chat__form__send" do
-        Send
-         
+  .form 
+    %form.new_message
+      .input-box
+        %input{type: "text",class: "input-box__text",placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          =icon('fa','image')
+          %input{type: "file",class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn",value: "Send"}

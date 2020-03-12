@@ -12,11 +12,17 @@
         = link_to "/users/#/edit", class: "side-bar__user-name__content__logo__setting" do
           = icon('fas', 'cog')
           %span<>
-  .group
-    
-    .group__name
-      %p aaa
-    .group__latest-message
-      最初のメッセージ
 
+  .chat-side__group
+    .chat-side__group__first-group
+      
+      = link_to'#',class: "chat-side__group__first-group__name" do
+        %p aaa
+      .chat-side__group__first-group__latest-message
+        最初のメッセージ
 
+      = link_to'#',class: "chat-side__group__first-group__name" do
+        %p aaa
+      .chat-side__group__first-group__latest-message
+        最初のメッセージ
+ 
