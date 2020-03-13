@@ -22,9 +22,9 @@
     
   .main-chat__form
     %form.main-chat__form__new_message
-      .main-chat__form__new_message__input-box
-        %input{type: "text",class: "main-chat__form__new_message__input-box__text",placeholder: "type a message"}
-        %label{class: "main-chat__form__new_message__input-box__image"}
-        =icon('fa','image')
-        %input{type: "file",class: "main_chat__form__new_message__input-box__file"}
-        %input{type: "submit", class: "main-chat__form__new_message__input-box__submit-btn",value: "Send"}
+      .main-chat__form__new-message__input-box
+        %input{type: "text",class: "main-chat__form__new-message__input-box__text",placeholder: "type a message"}
+        %label{class: "main-chat__form__new-message__input-box__image"}
+          =icon('fa','image')
+          %input{type: "file",class: "main-chat__form__new-message__input-box__file"}
+        %input{type: "submit", class: "main-chat__form__new-message__input-box__submit-btn",value: "Send"}
