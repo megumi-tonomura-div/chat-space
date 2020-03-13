@@ -1,4 +1,3 @@
-* Database creation
 
 # usersテーブル
 |Column|Type|Options|
@@ -43,4 +42,3 @@
 
 
 —————————————————————————————————————————
-
