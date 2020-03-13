@@ -1,17 +1,28 @@
 .chat-side
-  .side-header
-    .side-header__box
-      .side-header__box__user-name
+  .chat-side__header
+    .chat-side__header__box
+      .chat-side__header__box__user-name
         megu
-      .side-header__box__menu
-        .side-header__box__menu__new-group
+      .chat-side__header__box__menu
+        .chat-side__header__box__menu__new-group
         = link_to'#',class: "side-bar__user-name__content__logo__edit" do
-          = icon('fas', 'edit')
-        .side-header__box__menu__edit-user
+          = icon('far', 'edit')
+          %span<>
+        .chat-side__header__box__menu__edit-user
         = link_to "/users/#/edit", class: "side-bar__user-name__content__logo__setting" do
           = icon('fas', 'cog')
-  .group
-    .group__group__name
-      aaaa
-    .group__latest-message
-      最初の投稿
+          %span<>
+
+  .chat-side__group
+    .chat-side__group__first-group
+      
+      = link_to'#',class: "chat-side__group__first-group__name" do
+        %p aaa
+      .chat-side__group__first-group__latest-message
+        最初のメッセージ
+
+      = link_to'#',class: "chat-side__group__first-group__name" do
+        %p aaa
+      .chat-side__group__first-group__latest-message
+        最初のメッセージ
+ 
