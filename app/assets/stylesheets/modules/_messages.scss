@@ -47,30 +47,30 @@
     padding: 20px 20px 0;
     overflow: scroll;
     margin-bottom: 5px;
-    &__first-group{
+    .group{
       text-align: left;
       height: 80px;
       width: 260px;
       font-size: 15px;
       padding: 0px 0px 5px;
-      p{
+      &__name{
         text-decoration: none;
         color:$white;
         margin-bottom: 5px;
       }
-      &__latest-message{
+      &__message{
         width: 260px;
         padding: 0px 0px 40px;
         color: $white;
         font-size: 11px;
         margin-bottom: 5px;
-        p{
-          display: block;
-          margin-block-start: 1em;
-          margin-block-end: 1em;
-          margin-inline-start: 0px;
-          margin-inline-end: 0px;
-        }
+        // p{
+        //   display: block;
+        //   margin-block-start: 1em;
+        //   margin-block-end: 1em;
+        //   margin-inline-start: 0px;
+        //   margin-inline-end: 0px;
+        // }
       }
     } 
   }  
@@ -92,6 +92,11 @@
     position: relative;
     &__left{
       &__current-group{
+        h2{
+          font-size: 20px;
+          color: #333;
+          margin-bottom: 15px;
+        }
         font-size: 20px;
         color: black;
         justify-content: space-between;
@@ -105,7 +110,7 @@
           font-size: 12px;
            color: #999999;
            ul {
-            font-size: 10px;
+            font-size: 12px;
             display: inline-block;
            }
         }
@@ -125,7 +130,7 @@
       }
     }
   }
-  
+
   &__messages{
     height: calc(100vh - 190px);
     padding: 46px 40px;

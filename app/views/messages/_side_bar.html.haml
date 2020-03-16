@@ -12,12 +12,10 @@
           = icon('fas', 'cog', class: 'side-bar__user-name__content__logo__setting')
 
   .chat-side__group
-    .chat-side__group__first-group
-      = link_to'#',class: "chat-side__group__first-group__name" do
-        %p aaa
-      .chat-side__group__first-group__latest-message
-        最初のメッセージ
-      = link_to'#',class: "chat-side__group__first-group__name" do
-        %p aaa
-      .chat-side__group__first-group__latest-message
-        最初のメッセージ
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
