@@ -1,4 +1,30 @@
-.main_chat
-  .main_chat__header
-  .main_chat__message
-  .main_chat__footer
+.main-chat
+  .main-chat__header
+    .main-chat__header__left
+      .main-chat__header__left__current-group
+        %h2 current-group
+      .main-chat__header__left__member
+      .main-chat__header__left__member__M
+        %ul Member :  megu
+    .main-chat__header__right  
+      = link_to "#", class: "main_chat__header__right" do
+        Edit
+
+  .main-chat__messages
+    .main-chat__messages__first
+      .main-chat__messages__first__name
+        megu
+      .main-chat__messages__first__text
+        2020/03/12(Tue)17:27:46
+
+    .main-chat__messages__data
+      こんにちは！
+    
+  .main-chat__form
+    %form.main-chat__form__new_message
+      .main-chat__form__new-message__input-box
+        %input{type: "text",class: "main-chat__form__new-message__input-box__text",placeholder: "type a message"}
+        %label{class: "main-chat__form__new-message__input-box__image"}
+          =icon('fa','image')
+          %input{type: "file",class: "main-chat__form__new-message__input-box__file"}
+        %input{type: "submit", class: "main-chat__form__new-message__input-box__submit-btn",value: "Send"}

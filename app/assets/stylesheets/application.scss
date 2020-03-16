@@ -1,4 +1,9 @@
+@import "modules/color";
 @import "reset";
-@import "messages";
+@import "config/colors";
+@import "modules/messages";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "user";
+@import "modules/flash";
+@import "modules/group";
