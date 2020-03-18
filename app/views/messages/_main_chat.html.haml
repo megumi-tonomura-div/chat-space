@@ -7,24 +7,15 @@
       .main-chat__header__left__member__M
         %ul Member :  megu
     .main-chat__header__right  
-      = link_to "#", class: "main_chat__header__right" do
-        Edit
-
+      = link_to 'Edit', "/groups/#{@group.id}/edit", method: :get
   .main-chat__messages
-    .main-chat__messages__first
-      .main-chat__messages__first__name
-        megu
-      .main-chat__messages__first__text
-        2020/03/12(Tue)17:27:46
-
-    .main-chat__messages__data
-      こんにちは！
+    = render @messages
     
   .main-chat__form
-    %form.main-chat__form__new_message
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: "main-chat__form__new-message", placeholder: 'type a message'
       .main-chat__form__new-message__input-box
-        %input{type: "text",class: "main-chat__form__new-message__input-box__text",placeholder: "type a message"}
-        %label{class: "main-chat__form__new-message__input-box__image"}
+        = f.label :image, class: "main-chat__form__new-message__input-box__image" do
           =icon('fa','image')
-          %input{type: "file",class: "main-chat__form__new-message__input-box__file"}
-        %input{type: "submit", class: "main-chat__form__new-message__input-box__submit-btn",value: "Send"}
+          = f.file_field :image,class: 'main-chat__form__new-message__input-box__image__file'
+      = f.submit 'Send', class: 'main-chat__form__new-message__submit-btn'
