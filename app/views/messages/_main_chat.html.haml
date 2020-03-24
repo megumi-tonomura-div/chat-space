@@ -13,9 +13,9 @@
     
   .main-chat__form
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: "main-chat__form__new-message", placeholder: 'type a message'
-      .main-chat__form__new-message__input-box
-        = f.label :image, class: "main-chat__form__new-message__input-box__image" do
-          =icon('fa','image')
-          = f.file_field :image,class: 'main-chat__form__new-message__input-box__image__file'
-      = f.submit 'Send', class: 'main-chat__form__new-message__submit-btn'
+      .main-chat__form__oya
+        = f.text_field :content, class:'main-chat__form__oya__new', placeholder: 'type a message'
+        = f.label :image, class:"main-chat__form__oya__image" do
+          = icon('far','image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class:'main-chat__form__oya__submit'
