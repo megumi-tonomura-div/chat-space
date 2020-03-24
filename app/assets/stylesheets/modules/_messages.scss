@@ -1,4 +1,4 @@
-.chat-side {  
+.chat-side {
   width: 300px;
   float: left;
   color:$white;
@@ -9,7 +9,7 @@
     font-weight: bold;
     align-items: center;
     padding: 0 20px;
-    &__box{ 
+    &__box{
       display: flex;
       justify-content: space-between; 
       font-weight: bold;
@@ -30,7 +30,7 @@
         height: 20px;
         text-align: right;
         display: flex;
-        line-height: 100px;        
+        line-height: 100px;
         &__edit-user{
           margin-left: 0.3rem;
         }
@@ -58,7 +58,7 @@
         color:$white;
         margin-bottom: 5px;
       }
-      
+
       &__message{
         width: 260px;
         padding: 0px 0px 40px;
@@ -161,9 +161,7 @@
       display: flex;
       
       &__new {
-        
         height: 50px;
-        
         color: #434a54;
         border-style: none; 
         padding: 0 40px 0 10px;
