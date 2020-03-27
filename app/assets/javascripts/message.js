@@ -51,6 +51,12 @@ $('#new_message').on('submit', function(e){
       $('.main-chat__messages').animate({ scrollTop: $('.main-chat__messages')[0].scrollHeight});
       $('form')[0].reset();
     })
+    .fail(function(){
+      alert('エラーが発生したためメッセージは送信できませんでした。');
+    })
+    .always(function(data){
+      $('.main-chat__form__oya__submit').prop('disabled', false);　//ここで解除している
+    })
 })
 });
 
