@@ -53,23 +53,25 @@
       font-size: 15px;
       padding: 0px 0px 5px;
       
-
-      &__name{
-        color:$white;
-        margin-bottom: 5px;
+      &__oya{
         text-decoration: none;
-      }
+        
+        &__name{
+          color:$white;
+          margin-bottom: 5px;
+        }
 
-      &__message{
-        width: 260px;
-        padding: 0px 0px 40px;
-        color: $white;
-        font-size: 11px;
-        margin-bottom: 5px;
-        text-decoration: none;
+        &__message{
+          width: 260px;
+          padding: 0px 0px 40px;
+          color: $white;
+          font-size: 11px;
+          margin-bottom: 5px;
+          text-decoration: none;
+        }
       }
     } 
-  }  
+  }
 }
 
 .main-chat {
