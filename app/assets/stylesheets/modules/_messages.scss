@@ -107,7 +107,11 @@
           color: #999999;
           ul {
             font-size: 12px;
-            display: inline-block;
+            li{
+              display: inline-block;
+              margin-left: 10px;
+            }
+            
           }
         }
       }
