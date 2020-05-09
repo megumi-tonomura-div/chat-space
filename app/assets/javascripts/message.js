@@ -63,7 +63,7 @@ $(function(){
       $('form')[0].reset();
     })
     .always(function(data){
-      $('.main-chat__messages__first').prop('disabled', false);//ここで解除している
+      $('.main-chat__form__oya__submit').prop('disabled', false);//ここで解除している
     })
     .fail(function(){
       alert('エラーが発生したためメッセージは送信できませんでした。');
